@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: #f8b31a;
+
+}
+.container{
+    border: 1px solid red;
+    position: absolute;
+     bottom:50%;
+     left: 50%; 
+    transform: translate(-50%, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 55px;
+}
+.container .pre-container{
+    height: 550px; /* Increased height to accommodate refresh button */
+    width: 350px;
+    background: white;
+    border-radius: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container .pre-container .player_turn{
+    height: 60px;
+    width: 300px;
+    background: #0e3055;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.container .pre-container .player_turn .turn{
+    height: 60px;
+    width: 150px;
+    float: left;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.container .pre-container .player_turn .turn_indicator{
+    width: 160px;
+    height: 60px;
+    background: #f8b31a;
+    border-radius: 50px;
+    position: absolute;
+    transition: all .2s;
+}
+.container .pre-container .board{
+    height: 320px;
+    width: 280px;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.container .pre-container .board .cell{
+    border-bottom: 4px solid #d6d5d7;
+    border-right: 4px solid #d6d5d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #0e3055;
+    font-size: 55px;
+}
+.container .pre-container .board .cell:nth-child(3n){
+    border-right: none;
+}
+.container .pre-container .board .cell:nth-child(n+7){
+    border-bottom: none;
+}
+.container .pre-container .board .cell .fa-o{
+    color: #f8b31a;
+}
+.container .result_box{
+    position: absolute;
+    height: 120px;
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    display: none;
+}
+.container .result_box .span{
+    color: #030f1dcf;
+    font-weight: px;
+    white-space: nowrap;
+}
+.container .result_box button{
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 100px;
+    background: #0e3055;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+/* New styles for refresh button */
+.refresh-button {
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
+    background: #0e3055;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.refresh-button:hover {
+    background: #1a4475;
+}
+
+.refresh-button i {
+    font-size: 14px;
+}

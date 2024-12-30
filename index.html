@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+    <div class="container">
+        <div class="pre-container">
+            <div class="player_turn">
+                <div class="x_turn turn"> X Turn</div>
+                <div class="o_turn turn"> O Turn</div> 
+                <div class="turn_indicator"></div>
+            </div>
+            <div class="board">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <button class="refresh-button" onclick="resetGame()">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+        </div>
+        <div class="result_box">
+            <span class="winner_msg">Player X Won The Game</span>
+            <button class="restart" onclick="location.reload()">Restart</button>
+        </div>
+    </div>
+
+     
+
+    <script src="index.js"></script>
+ </body>
+ </html>
